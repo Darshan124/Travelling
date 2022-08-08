@@ -412,6 +412,7 @@ section {
         flex: 1 1 42rem;
         padding-right: 5rem;
         padding-bottom: 5rem;
+        tra
 
         img {
             width: 100%;
@@ -453,6 +454,7 @@ section {
             overflow: hidden;
             height: 30rem;
             width: 100%;
+            animation: 1s ease-out 0s 1 slideInFromLeft;
 
             img {
                 height: 100%;
@@ -506,6 +508,15 @@ section {
             font-size: 1.7rem;
             color: $black;
         }
+
+        @keyframes slideInFromLeft {
+            0% {
+              transform: translateX(-100%);
+            }
+            100% {
+              transform: translateX(0);
+            }
+          }
     }
 }
 // shop part end..........................................................................................
