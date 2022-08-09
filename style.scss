@@ -318,9 +318,10 @@ section {
     flex: 1 1 42rem;
     padding-right: 5rem;
     padding-bottom: 5rem;
-    tra img {
+    img {
       width: 100%;
       box-shadow: 4rem 4rem 0 rgba(0, 0, 0, 0.1);
+      animation: slideIn 1.5s ease-in-out forwards;
     }
   }
 
@@ -340,6 +341,14 @@ section {
     }
   }
 }
+@keyframes slideIn {
+    0% {
+      transform: translateX(-500px) scale(.2);
+    }
+    100% {
+      transform: translateX(0px) scale(1);
+    }
+  }
 // about part end..........................................................................................
 
 // shop part start..........................................................................................

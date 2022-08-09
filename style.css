@@ -210,9 +210,10 @@ section {
     flex: 1 1 42rem;
     padding-right: 5rem;
     padding-bottom: 5rem; }
-    .about .image tra img {
+    .about .image img {
       width: 100%;
-      box-shadow: 4rem 4rem 0 rgba(0, 0, 0, 0.1); }
+      box-shadow: 4rem 4rem 0 rgba(0, 0, 0, 0.1);
+      animation: slideIn 1.5s ease-in-out forwards; }
   .about .content {
     flex: 1 1 42rem; }
     .about .content h3 {
@@ -224,6 +225,11 @@ section {
       padding: 1rem 0;
       line-height: 2; }
 
+@keyframes slideIn {
+  0% {
+    transform: translateX(-500px) scale(0.2); }
+  100% {
+    transform: translateX(0px) scale(1); } }
 .shop .slide {
   width: 35rem;
   border: 0.2rem solid #10221b; }
