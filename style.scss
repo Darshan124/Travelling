@@ -44,7 +44,6 @@ html {
   }
 }
 
-
 section {
   padding: 5rem 9%;
 }
@@ -241,14 +240,13 @@ section {
 
     .content {
       width: 50rem;
-      animation: fadeInAnimation ease 3s;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
+      animation: slideIn2 1.5s ease-in-out forwards;
     }
 
     span {
       font-size: 4rem;
       color: $black;
+    //   animation: slideIn2 1.5s ease-in-out forwards;
     }
 
     h3 {
@@ -256,6 +254,7 @@ section {
       color: $green;
       padding-top: 0.5rem;
       text-transform: uppercase;
+    //   animation: slideIn 1.5s ease-in-out forwards;
     }
 
     p {
@@ -272,6 +271,16 @@ section {
   font-size: 3rem;
   color: $black;
 }
+
+@keyframes slideIn2 {
+  0% {
+    transform: translateY(-500px) scale(0.2);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
 // home part end
 
 // category part start
@@ -318,10 +327,13 @@ section {
     flex: 1 1 42rem;
     padding-right: 5rem;
     padding-bottom: 5rem;
+
     img {
       width: 100%;
       box-shadow: 4rem 4rem 0 rgba(0, 0, 0, 0.1);
-      animation: slideIn 1.5s ease-in-out forwards;
+      &.scrolled {
+        animation: slideIn 1.5s ease-in-out forwards;
+      }
     }
   }
 
@@ -343,13 +355,13 @@ section {
 }
 
 @keyframes slideIn {
-    0% {
-      transform: translateX(-500px) scale(.2);
-    }
-    100% {
-      transform: translateX(0px) scale(1);
-    }
+  0% {
+    transform: translateX(-500px) scale(0.2);
   }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
 // about part end..........................................................................................
 
 // shop part start..........................................................................................

@@ -157,9 +157,7 @@ section {
       justify-content: flex-start; }
     .home .box .content {
       width: 50rem;
-      animation: fadeInAnimation ease 3s;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards; }
+      animation: slideIn2 1.5s ease-in-out forwards; }
     .home .box span {
       font-size: 4rem;
       color: #10221b; }
@@ -179,6 +177,11 @@ section {
   font-size: 3rem;
   color: #10221b; }
 
+@keyframes slideIn2 {
+  0% {
+    transform: translateY(-500px) scale(0.2); }
+  100% {
+    transform: translateY(0px) scale(1); } }
 .category .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
@@ -212,8 +215,9 @@ section {
     padding-bottom: 5rem; }
     .about .image img {
       width: 100%;
-      box-shadow: 4rem 4rem 0 rgba(0, 0, 0, 0.1);
-      animation: slideIn 1.5s ease-in-out forwards; }
+      box-shadow: 4rem 4rem 0 rgba(0, 0, 0, 0.1); }
+      .about .image img.scrolled {
+        animation: slideIn 1.5s ease-in-out forwards; }
   .about .content {
     flex: 1 1 42rem; }
     .about .content h3 {
