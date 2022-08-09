@@ -1,33 +1,3 @@
-var f = document.getElementById('foo');
-document.addEventListener('click', function(ev){
-    f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
-    f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
-},false);
-
-var a = document.getElementById('foo1');
-document.addEventListener('click', function(ev){
-    a.style.transform = 'translateY('+(ev.clientY-25)+'px)';
-    a.style.transform += 'translateX('+(ev.clientX-25)+'px)';
-},false);
-
-var b = document.getElementById('foo2');
-document.addEventListener('click', function(ev){
-    b.style.transform = 'translateY('+(ev.clientY-25)+'px)';
-    b.style.transform += 'translateX('+(ev.clientX-25)+'px)';
-},false);
-
-var c = document.getElementById('foo3');
-document.addEventListener('click', function(ev){
-    c.style.transform = 'translateY('+(ev.clientY-25)+'px)';
-    c.style.transform += 'translateX('+(ev.clientX-25)+'px)';
-},false);
-
-var d = document.getElementById('foo4');
-document.addEventListener('click', function(ev){
-    d.style.transform = 'translateY('+(ev.clientY-25)+'px)';
-    d.style.transform += 'translateX('+(ev.clientX-25)+'px)';
-},false);
-
 const header = document.querySelector('.header')
 window.addEventListener('scroll',fixheader)
 
