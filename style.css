@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@300;600&display=swap");
 * {
   font-family: "Encode Sans Semi Expanded", sans-serif;
   margin: 0px;
@@ -159,16 +160,18 @@ section {
       width: 50rem;
       animation: slideIn2 1.5s ease-in-out forwards; }
     .home .box span {
+      font-family: 'Encode Sans Semi Expanded', sans-serif;
       font-size: 4rem;
-      color: #10221b; }
+      color: #eee; }
     .home .box h3 {
+      font-family: 'Encode Sans Semi Expanded', sans-serif;
       font-size: 6rem;
       color: #219150;
       padding-top: 0.5rem;
       text-transform: uppercase; }
     .home .box p {
       line-height: 2;
-      color: #10221b;
+      color: #eee;
       font-size: 1.5rem;
       padding: 1rem 0; }
 
@@ -220,6 +223,8 @@ section {
         animation: slideIn 1.5s ease-in-out forwards; }
   .about .content {
     flex: 1 1 42rem; }
+    .about .content.scrolled {
+      animation: slideIn3 1.5s ease-in-out forwards; }
     .about .content h3 {
       font-size: 3rem;
       color: #219150; }
@@ -232,6 +237,11 @@ section {
 @keyframes slideIn {
   0% {
     transform: translateX(-500px) scale(0.2); }
+  100% {
+    transform: translateX(0px) scale(1); } }
+@keyframes slideIn3 {
+  0% {
+    transform: translateX(500px) scale(0.2); }
   100% {
     transform: translateX(0px) scale(1); } }
 .shop .slide {

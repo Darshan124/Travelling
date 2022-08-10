@@ -1,3 +1,4 @@
+// on scroll animation effect start....................................................................................
 const scrollElements = document.querySelectorAll(".js-scroll");
 
 const elementInView = (el, dividend = 1) => {
@@ -39,21 +40,22 @@ window.addEventListener("scroll", () => {
   handleScrollAnimation();
 });
 
+// on scroll animation effect start....................................................................................
 
-
-
-
+// navbar sticky .....................................................................................................
 const header = document.querySelector('.header')
 window.addEventListener('scroll',fixheader)
 
 function fixheader(){
-  if(window.scrollY > header.offsetHeight +00){
+  if(window.scrollY > header.offsetHeight +0){
     header.classList.add('active')
   }else{
     header.classList.remove('active')
   }
 }
 
+
+// menu-btn on click  ...................................................................................................
 let navbar1 = document.querySelector('.navbar');
 
 document.querySelector('#menu-btn').onclick = () =>{
@@ -63,6 +65,7 @@ document.querySelector('#nav-close').onclick = () =>{
     navbar1.classList.remove('active');
 }
 
+//search-form...........................................................................................................
 let searchFrom = document.querySelector('.search-form');
 
 document.querySelector('#search-btn').onclick = () =>{
@@ -82,25 +85,28 @@ document.querySelector('#close-search').onclick = () =>{
 //     }
 // }
 
-window.onload =() =>{
+//
+// window.onload =() =>{
 
-    if(window.scrollY>0){
-        document.querySelector('.header').classList.add('.active');
-    }else{
-            document.querySelector('.header').classList.remove('.active');
-    }
-}
+//     if(window.scrollY>0){
+//         document.querySelector('.header').classList.add('.active');
+//     }else{
+//             document.querySelector('.header').classList.remove('.active');
+//     }
+// }
 
 
-var swiper = new Swiper(".home-slider", {
-    loop:true, 
-    grabCursor:true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-});
+// var swiper = new Swiper(".home-slider", {
+//     loop:true, 
+//     grabCursor:true,
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev",
+//     },
+// });
 
+
+// product slider effect..........................................................................................
 var swiper = new Swiper(".product-slider", {
     loop:true, 
     grabCursor:true,
@@ -125,6 +131,7 @@ var swiper = new Swiper(".product-slider", {
     },
 });
 
+// review slider effect...............................................................................................
 var swiper = new Swiper(".review-slider", {
     loop:true, 
     grabCursor:true,
@@ -146,6 +153,7 @@ var swiper = new Swiper(".review-slider", {
     },
 });
 
+// blogs slider effect...............................................................................................
 var swiper = new Swiper(".blogs-slider", {
     loop:true, 
     grabCursor:true,
@@ -167,7 +175,7 @@ var swiper = new Swiper(".blogs-slider", {
     },
 });
 
-
+// clients slider effect...............................................................................................
 var swiper = new Swiper(".clients-slider", {
   loop:true, 
   grabCursor:true,
