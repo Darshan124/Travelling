@@ -160,12 +160,12 @@ section {
       width: 50rem;
       animation: slideIn2 1.5s ease-in-out forwards; }
     .home .box span {
-      font-family: 'Encode Sans Semi Expanded', sans-serif;
+      font-family: "Encode Sans Semi Expanded", sans-serif;
       font-size: 4rem;
       color: #eee; }
-    .home .box h3 {
-      font-family: 'Encode Sans Semi Expanded', sans-serif;
-      font-size: 6rem;
+    .home .box h3 span {
+      font-family: "Encode Sans Semi Expanded", sans-serif;
+      font-size: 5rem;
       color: #219150;
       padding-top: 0.5rem;
       text-transform: uppercase; }
@@ -174,11 +174,19 @@ section {
       color: #eee;
       font-size: 1.5rem;
       padding: 1rem 0; }
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 3rem;
-  color: #10221b; }
+    .home .box a {
+      margin-top: 1rem;
+      display: inline-block;
+      border: 0.2rem solid #eee;
+      color: #eee;
+      cursor: pointer;
+      background: none;
+      font-size: 1.7rem;
+      padding: 1rem 3rem; }
+      .home .box a:hover {
+        background: #eee;
+        border: 0.2rem solid #eee;
+        color: #10221b; }
 
 @keyframes slideIn2 {
   0% {
@@ -192,11 +200,14 @@ section {
   .category .box-container .box {
     text-align: center;
     padding: 2em; }
+    .category .box-container .box.scrolled {
+      animation: slideIn6 1.5s ease-in-out forwards; }
     .category .box-container .box img {
       height: 20rem;
       width: 20rem;
       border-radius: 50%;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      transition: smooth; }
     .category .box-container .box h3 {
       font-size: 2rem;
       color: #219150; }
@@ -206,6 +217,11 @@ section {
       padding: 1rem 0;
       line-height: 2; }
 
+@keyframes slideIn6 {
+  0% {
+    transform: translateY(-500px) scale(0.2); }
+  100% {
+    transform: translateY(0px) scale(1); } }
 .about {
   background: #eee;
   display: flex;

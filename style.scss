@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@300;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@300;600&display=swap");
 
 * {
   font-family: "Encode Sans Semi Expanded", sans-serif;
@@ -245,18 +245,20 @@ section {
     }
 
     span {
-    font-family: 'Encode Sans Semi Expanded', sans-serif;
-    font-size: 4rem;
-    color: $light-bg;
-     
+      font-family: "Encode Sans Semi Expanded", sans-serif;
+      font-size: 4rem;
+      color: $light-bg;
     }
 
     h3 {
-     font-family: 'Encode Sans Semi Expanded', sans-serif;
-      font-size: 6rem;
-      color: $green;
-      padding-top: 0.5rem;
-      text-transform: uppercase;
+      
+        span {
+          font-family: "Encode Sans Semi Expanded", sans-serif;
+          font-size: 5rem;
+          color: $green;
+          padding-top: 0.5rem;
+          text-transform: uppercase;
+      }
     }
 
     p {
@@ -265,13 +267,23 @@ section {
       font-size: 1.5rem;
       padding: 1rem 0;
     }
-  }
-}
+    a {
+      margin-top: 1rem;
+      display: inline-block;
+      border: 0.2rem solid $light-bg;
+      color: $light-bg;
+      cursor: pointer;
+      background: none;
+      font-size: 1.7rem;
+      padding: 1rem 3rem;
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 3rem;
-  color: $black;
+      &:hover {
+        background: $light-bg;
+        border: 0.2rem solid $light-bg;
+        color: $black;
+      }
+    }
+  }
 }
 
 @keyframes slideIn2 {
@@ -283,9 +295,9 @@ section {
   }
 }
 
-// home part end
+// home part end....................................................................................................
 
-// category part start
+// category part start..............................................................................................
 .category {
   .box-container {
     @include grid(29rem);
@@ -293,12 +305,19 @@ section {
     .box {
       text-align: center;
       padding: 2em;
+      &.scrolled {
+        animation: slideIn6 1.5s ease-in-out forwards;
+      }
 
       img {
         height: 20rem;
         width: 20rem;
         border-radius: 50%;
         margin-bottom: 1rem;
+        transition: smooth;
+        
+        // animation: bounce 2s infinite;
+        // -webkit-animation: bounce 2s infinite;
       }
 
       h3 {
@@ -312,7 +331,44 @@ section {
         padding: 1rem 0;
         line-height: 2;
       }
+      // @-webkit-keyframes bounce {
+      //   0% {
+      //     margin-top: 25px;
+      //     margin-bottom: 20px;
+      //   }
+      //   50% {
+      //     margin-top: 30px;
+      //     margin-bottom: 10px;
+      //   }
+      //   100% {
+      //     margin-top: 25px;
+      //     margin-bottom: 20px;
+      //   }
+      // }
+      // @keyframes bounce {
+      //   0% {
+      //     margin-top: 25px;
+      //     margin-bottom: 20px;
+      //   }
+      //   50% {
+      //     margin-top: 30px;
+      //     margin-bottom: 10px;
+      //   }
+      //   100% {
+      //     margin-top: 25px;
+      //     margin-bottom: 20px;
+      //   }
+      // }
     }
+  }
+}
+
+@keyframes slideIn6 {
+  0% {
+    transform: translateY(-500px) scale(0.2);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
   }
 }
 // category part end..........................................................................................
@@ -341,8 +397,8 @@ section {
 
   .content {
     flex: 1 1 42rem;
-    &.scrolled{
-        animation: slideIn3 1.5s ease-in-out forwards;
+    &.scrolled {
+      animation: slideIn3 1.5s ease-in-out forwards;
     }
 
     h3 {
@@ -369,13 +425,13 @@ section {
 }
 
 @keyframes slideIn3 {
-    0% {
-      transform: translateX(500px) scale(0.2);
-    }
-    100% {
-      transform: translateX(0px) scale(1);
-    }
+  0% {
+    transform: translateX(500px) scale(0.2);
   }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
 // about part end..........................................................................................
 
 // shop part start..........................................................................................
