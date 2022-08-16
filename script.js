@@ -37,13 +37,14 @@ var wordflick = function () {
         offset--;
       }
     }
-    $('.word').text(part);
+  $('.word').text(part);
   },speed);
 };
 
 $(document).ready(function () {
   wordflick();
 });
+
 
 
 
